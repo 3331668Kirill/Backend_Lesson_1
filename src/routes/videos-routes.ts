@@ -48,7 +48,7 @@ videosRouter.put('/:videoId',
     const isUpdatedVideo = videosRepository.updateVideoById(id, req.body.title)
 
     if (isUpdatedVideo) {
-        res.send(201)
+        res.send(204)
     }
     else {
         res.send(404)
@@ -60,7 +60,7 @@ videosRouter.delete('/:id', (req: Request, res: Response ) => {
     const ind = videos.indexOf(el[0])
     videos.splice(ind,1)
     if (el.length) {
-        res.send({'deleted': el})
+        res.send(204)
     } else {
         res.send(404)
     }
