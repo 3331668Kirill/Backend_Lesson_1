@@ -34,7 +34,8 @@ videosRouter.post('/',
     //authMiddleware,
     (req: Request, res: Response) => {
     const newVideo = videosRepository.createVideo(req.body.title)
-    res.sendStatus(201).send(newVideo)
+    res.status(201)
+    res.send(newVideo)
 
 })
 videosRouter.put('/:videoId',
