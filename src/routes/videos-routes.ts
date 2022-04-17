@@ -3,7 +3,7 @@ import {videosRepository} from "../repositories/videos-repository";
 import {videos} from "../repositories/db";
 import {body} from "express-validator";
 import {inputValidatorMiddleware} from "../middlewares/input-validator-middleware";
-import {authMiddleware} from "../middlewares/auth-middleware";
+//import {authMiddleware} from "../middlewares/auth-middleware";
 
 
 export const videosRouter = Router({})
