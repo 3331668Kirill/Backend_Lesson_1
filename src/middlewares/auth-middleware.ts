@@ -1,11 +1,11 @@
-import {NextFunction, Request, Response} from "express";
+//import {NextFunction, Request, Response} from "express";
 
 
-export const authMiddleware = (req: Request, res: Response, next: NextFunction) => {
-    if(req.query.token === '123') {
-        next()
-    }else{
-        //res.send(400)
-        next()
-    }
-}
+// export const authMiddleware = (req: Request, res: Response, next: NextFunction) => {
+//     if(req.query.token === '123') {
+//         next()
+//     }else{
+//         //res.send(400)
+//         next()
+//     }
+// }

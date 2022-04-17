@@ -15,7 +15,7 @@ videosRouter.get('/', (req: Request, res: Response ) => {
 
 })
 videosRouter.get('/:videoId',
-    authMiddleware,
+    //authMiddleware,
     (req: Request, res: Response) => {
 
     const id = +req.params.videoId
@@ -31,7 +31,7 @@ videosRouter.post('/',
     body('title').isString().withMessage('Name should be a string')
         .trim().not().isEmpty().withMessage('Name should be not empty'),
     inputValidatorMiddleware,
-    authMiddleware,
+    //authMiddleware,
     (req: Request, res: Response) => {
     const newVideo = videosRepository.createVideo(req.body.title)
     res.sendStatus(201).send(newVideo)
@@ -41,7 +41,7 @@ videosRouter.put('/:videoId',
     body('title').isString().withMessage('Name should be a string')
         .trim().not().isEmpty().withMessage('Name should be not empty'),
     inputValidatorMiddleware,
-    authMiddleware,
+   // authMiddleware,
     (req: Request, res: Response) => {
     const id = +req.params.videoId
     const isUpdatedVideo = videosRepository.updateVideoById(id, req.body.title)
